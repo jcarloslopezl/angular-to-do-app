@@ -13,7 +13,9 @@ angular.module('todoApp')
 		$scope.todoRemove = function(todo){
 			TodoResource.delete({id: todo._id}, function(data){
 				console.log(data);
-				$location.path("/");
+				$scope.todos = $scope.todos.filter(function(element){
+					return element._id !== todo._id;
+				})
 			});
 		}
 	
