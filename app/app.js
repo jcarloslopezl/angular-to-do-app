@@ -2,7 +2,7 @@
 
 // app.js
 angular
-		.module('todoApp', ["ngRoute"])
+		.module('todoApp', ["ngRoute", "ngResource"])
 		.config(function($routeProvider){
 			$routeProvider
 				.when("/", {

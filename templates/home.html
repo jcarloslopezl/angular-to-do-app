@@ -1,1 +1,7 @@
 <h1>{{title}}</h1>
+
+<div ng-repeat="todo in todos">
+	<h2>{{todo.title}}</h2>
+	<p>{{todo.url}}</p>
+	<p>Completed: {{todo.completed}}</p>
+</div>
