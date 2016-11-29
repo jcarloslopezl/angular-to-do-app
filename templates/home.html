@@ -1,7 +1,27 @@
-<h1>{{title}}</h1>
+<lx-tabs>
+	<lx-tab heading="To-Dos">
+		<div class="p+">
+			<div class="card top-space" ng-repeat="todo in todos">
+				<div class="p+">
+						<strong class="fs-headline display-block tc-red-900">
+							{{todo.title}}
+						</strong>
 
-<div ng-repeat="todo in todos">
-	<h2>{{todo.title}}</h2>
-	<p>{{todo.url}}</p>
-	<p>Completed: {{todo.completed}}</p>
-</div>
+						<div class="paragraph fs-body-1 mt+">
+							{{todo.url}}
+						</div>
+
+						<div class="paragraph fs-body-1 mt+">
+							Completed: {{todo.completed}}
+						</div>
+
+						<div class="card__actions">
+							<a href="#/todo/{{todo.id}}" class="btn btn-m btn--blue btn--flat" lx-ripple>Show</a>
+							<a href="#/todo/edit/{{todo.id}}" class="btn btn-m btn--green btn--flat" lx-ripple>Edit</a>
+							<a href="#/todo/{{todo.id}}" class="btn btn-m btn--red btn--flat" lx-ripple>Delete</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</lx-tab>
+</lx-tabs>
