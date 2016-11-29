@@ -4,7 +4,6 @@
 angular.module('todoApp')
   .controller('HomeController', function($scope, $location, TodoResource){
   	$scope.title = "Home";
-
 		$scope.todos = [];
 
 		// Get ToDos
@@ -12,7 +11,7 @@ angular.module('todoApp')
 
 		// Remove ToDo
 		$scope.todoRemove = function(todo){
-			Todo.delete({id: todo._id}, function(data){
+			TodoResource.delete({id: todo._id}, function(data){
 				console.log(data);
 				$location.path("/");
 			});
