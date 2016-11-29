@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+<form ng-submit="createTodo()">
+	<div class="card top-space">
+		<div class="p+">
+				
+				<div flex-container="row">
+					<div flex-item>
+						<lx-text-field label="Title">
+							<input type="text" ng-model="todo.title">
+						</lx-text-field>
+					</div>
+				</div>
+
+				<div flex-container="row">
+					<div flex-item>
+						<lx-text-field label="Url">
+							<input type="text" ng-model="todo.url">
+						</lx-text-field>
+					</div>
+				</div>
+
+
+				<div class="card__actions">
+					<button type="submit" class="btn btn--blue btn--l btn--raised">Save</button>
+				</div>
+		</div>
+	</div>
+</form>
