@@ -23,7 +23,8 @@ angular.module('todoApp')
  	.controller('TodoController', function($scope, $resource, $routeParams, $location, TodoResource){
 		// Get ToDos
 		$scope.title = "Edit ToDo";
-		$scope.todo = TodoResource.get({id: $routeParams._id});
+		$scope.todo = TodoResource.get({id: $routeParams.id});
+		console.log($scope.todo);
 		
 		$scope.createTodo = function(){
 			TodoResource.update({id: $scope.todo._id}, {data: $scope.todo}, function(data){

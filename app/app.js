@@ -16,5 +16,9 @@ angular
 				.when("/todo/:id",{
 					controller: "TodoController",
 					templateUrl: "templates/todo.html"
+				})
+				.when("/todo/edit/:id",{
+					controller: "TodoController",
+					templateUrl: "templates/todo_form.html"
 				});
 		});
