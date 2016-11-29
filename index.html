@@ -19,6 +19,20 @@
 	<script src="app/services.js"></script>
 </head>
 <body>
-	<div ng-view></div>
+	<nav class="bgc-blue-800 tc-white" flex-container="row" flex-align="center center">
+		<div flex-item="3">
+			<h1 class="fx-display-3 display-block">To-Do App</h1>
+		</div>
+		<div flex-item="1">
+			<a href="/">Home</a>
+		</div>
+		<div flex-item="1">
+			<a href="#/todo/new">Create To-Do</a>
+		</div>
+	</nav>
+
+	<div flex-container="row" flex-align="center"> 
+		<div ng-view flex-item="10"></div>
+	</div>
 </body>
 </html>
