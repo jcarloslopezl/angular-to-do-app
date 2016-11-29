@@ -12,5 +12,9 @@ angular
 				.when("/todo/new",{
 					controller: "NewTodoController",
 					templateUrl: "templates/todo_form.html"
+				})
+				.when("/todo/:id",{
+					controller: "TodoController",
+					templateUrl: "templates/todo.html"
 				});
 		});
