@@ -11,10 +11,10 @@ angular.module('todoApp')
 
 		// Remove ToDo
 		$scope.todoRemove = function(todo){
-			TodoResource.delete({id: todo._id}, function(data){
+			TodoResource.delete({id: todo.id}, function(data){
 				console.log(data);
 				$scope.todos = $scope.todos.filter(function(element){
-					return element._id !== todo._id;
+					return element.id !== todo.id;
 				})
 			});
 		}
@@ -28,8 +28,8 @@ angular.module('todoApp')
 		console.log($scope.todo);
 		
 		$scope.createTodo = function(){
-			TodoResource.update({id: $scope.todo._id}, {data: $scope.todo}, function(data){
-				$location.path("/todo/"+$scope.todo._id);
+			TodoResource.update({id: $scope.todo.id}, {data: $scope.todo}, function(data){
+				$location.path("/todo/"+$scope.todo.id);
 			});
 		}
 
