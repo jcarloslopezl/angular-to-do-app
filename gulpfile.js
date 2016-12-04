@@ -47,7 +47,7 @@ gulp.task('server', function(){
 gulp.task('sass', function () {
  gulp.src(config.styles.watch)
    .pipe(sass({
-        outputStyle: 'expanded',
+        outputStyle: 'compressed',
         sourceComments: false,
         includePaths: [
           './bower_components/lumx/dist',
