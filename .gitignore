@@ -30,6 +30,11 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 ### Node ###
 # Logs
