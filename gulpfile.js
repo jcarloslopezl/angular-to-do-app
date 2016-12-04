@@ -54,9 +54,6 @@ gulp.task('sass', function () {
           './bower_components/bourbon/app/assets/stylesheets'
         ]
       }).on('error', sass.logError))
-   .pipe(autoprefixer({
-      versions: ['last 2 browsers']
-   }))
    .pipe(concat('app.css'))
    .pipe(gulp.dest(config.styles.output));
 });
@@ -90,8 +87,12 @@ gulp.task('vendor', function() {
   gulp.src([
           'bower_components/angular/angular.js',
           'bower_components/angular-route/angular-route.js',
-          'bower_components/jquery/dist/jquery.min.js'
-      ])
+          'bower_components/angular-resource/angular-resource.js',
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/velocity/velocity.js',
+          'bower_components/moment/min/moment-with-locales.js',
+          'bower_components/lumx/dist/lumx.js'
+        ])
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./public/js/'));
