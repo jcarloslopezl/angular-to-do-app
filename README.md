@@ -5,7 +5,7 @@ Simple TO-DO web application consuming a RESTful Web Api
 
 
 
-## Licencia
+## License
 **The MIT License**
 
 Copyright (c) 2016 Juan Carlos López <jclopezdev@gmail.com>
