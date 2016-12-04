@@ -1,11 +1,11 @@
 <div class="card top-space">
 	<div class="p+">
 			<strong class="fs-headline display-block tc-red-900">
-				{{todo.title}}
+				{{todo.title }}
 			</strong>
 
 			<div class="paragraph fs-body-1 mt+">
-				{{todo.url}}
+				User Id: {{todo.userId}}
 			</div>
 
 			<div class="paragraph fs-body-1 mt+">
@@ -13,8 +13,8 @@
 			</div>
 
 			<div class="card__actions">
-				<a href="#/todo/edit/{{todo._id}}" class="btn btn-m btn--green btn--flat" lx-ripple>Edit</a>				
-				<a ng-click="todoRemove(todo)" class="btn btn-m btn--red btn--flat" lx-ripple>Delete</a>
+				<lx-button href="#/todo/edit/{{todo.id}}" lx-color="green" lx-type="flat" lx-ripple>Edit</lx-button>
+				<lx-button ng-click="todoRemove(todo)" lx-color="red" lx-type="flat" lx-ripple>Delete</lx-button>
 			</div>
 		</div>
 	</div>

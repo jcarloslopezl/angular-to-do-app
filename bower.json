@@ -1,0 +1,24 @@
+{
+  "name": "angular-to-do-app",
+  "description": "Angular To-do App",
+  "main": "index.html",
+  "authors": [
+    "Juan Carlos López"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jcarloslopezl/angular-to-do-app",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lumx": "~1.3.2",
+    "bourbon": "~4.2.7"
+  }
+}
